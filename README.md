@@ -4,7 +4,7 @@
 
 # Tema da Aula
 
-Turma Online 19 - Todas em Tech | Back-end | Semana 7 | 2022 | Professora X
+Turma Online 19 - Todas em Tech | Back-end | Semana 7 | 2022 | Beatriz Ramerindo
 
 ### Instruções
 
@@ -269,6 +269,10 @@ promise1()
 
 
 ### Links Úteis
+
+
+### Videos Complementares
+
 
 <p align="center">
 Desenvolvido com :purple_heart:  
