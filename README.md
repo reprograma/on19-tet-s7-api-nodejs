@@ -196,7 +196,6 @@ Mas o seu uso deve ser conciente, porque embora forneca muita flexibilidade no d
   | Settled    | Nome genérico para estado final de executado, independente de ter retornado sucesso ou erro  |
 
 <br>
-<img src='./assets/promise.png' width=500 alt='bloco de texto com código javascript'>
 <br><br>
 
 - Cria-se uma promise a partir da função construtora Promise passando como argumento uma callback que por sua vez recebe como argumentos os dois resultados possíveis para a promise: resolve ou rejeit, duas outras funções que executam o possível sucesso ou erro da promessa, respectivamente;
