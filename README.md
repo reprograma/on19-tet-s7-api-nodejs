@@ -59,11 +59,6 @@ O que veremos na aula de hoje?
 
 font: [medium](https://fabiojanio.medium.com/introdu%C3%A7%C3%A3o-ao-node-js-single-thread-event-loop-e-mercado-46edd82c1faf#:~:text=Single%2DThread-, O%20Node., %C3%BAltima%20entrada%2C%20primeira%20sa%C3%ADda)
 
-| Topico | Descrição |
-| ----------- | ----------- |
-| CallStacks | Title |
-| Paragraph | Text |
-
 #### CallStacks
 
 É uma pilha de funções que serão processadas pelo event-loop. No nodeJs ela é single-threading.
