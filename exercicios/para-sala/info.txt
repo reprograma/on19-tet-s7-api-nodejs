@@ -1,0 +1,1 @@
+Queue/Macro Task: Diferentemente da callstack, ela é execultada em segundo plano, geralmente numa operação demorada, como carregar um arquivo. Nesse processo são armazenados eventos que por sua vez associados a uma callback.

@@ -1,18 +1,38 @@
 # Exercício de Casa 🏠 
 
-## Nome do Exercicio
+1. [ ] Criar uma promise que simule um envio de email ela precisa ter como parametro: 
+  - o email da destinataria
+  - mensagem que será enviada.
 
-- Explicação do exercício: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo nibh, tempus sed rhoncus et, ultrices vitae orci.
-Donec erat mauris, laoreet in tortor vel, eleifend suscipit nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Aliquam leo nibh, tempus sed rhoncus et, ultrices vitae orci. Donec erat mauris, laoreet in tortor vel, eleifend suscipit nibh. 
+ Regras de negocio:
+  a. Se o email for vazio a retornar um erro
+
 ---
 
-Terminou o exercício? Dá uma olhada nessa checklist e confere se tá tudo certinho, combinado?!
+2. [ ] Consumir a promise  de envio de email com sucesso.
 
-- [ ] Fiz o fork do repositório.
-- [ ] Clonei o fork na minha máquina (`git clone url-do-meu-fork`).
-- [ ] Resolvi o exercício.
-- [ ] Adicionei as mudanças. (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
-- [ ] Commitei a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
-- [ ] Pushei os commits na minha branch (`git push origin nome-da-branch`)
-- [ ] Criei um Pull Request seguindo as orientaçoes que estao nesse [documento](/exercicios/para-casa/instrucoes-pull-request.md).
+Regras de negocio:
+
+1. Antes de enviar o email precisa imprimir no terminal uma mensagem que o email está sendo enviado
+
+2. Ao consumir a promise é necessário imprimir o seu resultado no terminal, seguindo o exemplo abaixo( Não precisa conter a mesma formatação ex: tracos, indentação, quebra de linhas etc...)
+
+console:
+```bash
+  tentando enviar email...
+  Para: beatriz@email.com
+  ---------------------------------------
+  Para conseguir realizar esse exercicio será necessário combinar todos os conhecimentos adquiridos em aula... 
+  email enviado com sucesso.
+```
+
+---
+
+3. [ ] Consumir a promise de envio de email com erro.
+
+console:
+```bash
+  tentando enviar email...
+
+  falha ao enviar o email.
+```
