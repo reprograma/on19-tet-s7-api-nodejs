@@ -1,14 +1,14 @@
 // cria a Promise que simula um envio de email
 const enviarEmail = (email, mensagem) => {
     return new Promise((resolve, reject) => {
-        if (!email) {
-            return reject("Falha ao enviar o email. O endereço de email da destinária precisa ser informado")
-        } else if (mensagem==null) {
-            return reject("Falha ao enviar o email. É necessário digitar a mensagem do email")
-        }
-        return resolve("Para: " + ({
-            para: email,
-        }).para)
+        setTimeout(() => {
+            if (!email) {
+                return reject("Falha ao enviar o email. O endereço de email da destinária precisa ser informado")
+            }
+            return resolve("Para: " + ({
+                para: email,
+            }).para)
+        }, 2000);
     }).then(mensagem = texto => console.log(texto));
 }
 
@@ -25,11 +25,13 @@ const emailEnviado = (email, mensagem) => {
         console.log("Email enviado com sucesso");
     }).catch((err) => {
         console.error(err);
-    }).catch
+    })
 }
 
 emailEnviado("elis@email.com", "Consolidação dos conhecimentos em Promise");
+//emailEnviado("elis@email.com", null);
+//emailEnviado("elis@email.com");
 
 // consome a promise de envio de email com erro
 //emailEnviado(null, "EnderecoEmail");
-//emailEnviado("elis@email.com", null);
+
