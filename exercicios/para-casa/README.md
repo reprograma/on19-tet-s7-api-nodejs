@@ -6,6 +6,8 @@
 
  Regras de negocio:
   a. Se o endereço de email (email da destinatária) for vazio, retornar um erro
+=======
+  a. Se o email da destinataria for vazio, retornar um erro
 
 ---
 
