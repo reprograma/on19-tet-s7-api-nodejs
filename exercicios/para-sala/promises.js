@@ -1,77 +1,67 @@
-// construcao
 const acharUsuaria = (nome) => {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (!nome) {
-        return reject("O nome nao pode ser vazio");
-      }
-      return resolve({
-        nome,
-        email: "email@emai.com",
-        id: 1234,
-      });
-    }, 1000);
-  });
-};
+      setTimeout(() => {
+          if (!nome) {
+              return reject("O nome não pode ser vazio")
+          }
+          return resolve({
+              nome,
+              email: "email@emaiil.com",
+              id: 1234
+          })
+      }, 1000)
+  })
+}
 
 const acharEndereco = (cep) => {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (!cep) {
-        return reject("O cep precisa ser informado");
-      }
+      setTimeout(() => {
 
-      return resolve({
-        cidade: "Sao Paulo",
-        sigla: "SP",
-        cep,
+          if (!cep) {
+              return reject("O CEP precisa ser informado")
+          }
+          return resolve({
+              cidade: "Praia Grande",
+              sigla: "SP",
+              cep
+          })
+      }, 3000)
+  })
+}
+
+module.exports={
+  acharUsuaria,acharEndereco
+}
+
+const imprimirDados = (nome, cep) => {
+  acharUsuaria(nome)
+      .then((usuaria) => {
+
+          console.log(("Usuaria carregada"));
+
+      return acharEndereco(cep).then((endereco) => {
+
+          return{
+              usuaria,endereco
+          }
+
+          /*console.log(`
+      nome: ${usuaria.nome}
+      email: ${usuaria.email}
+      cep:${endereco.cep}
+      cidade: ${endereco.cidade}
+      sigla: ${endereco.sigla}
+      `);*/
       });
-    }, 3000);
+  })
+  .then(dados =>{
+      console.log(dados);
+  })
+  .catch((err) => {
+      console.log(err)
   });
 };
 
-module.exports = {
-  acharUsuaria, acharEndereco
-}
-
-// cosumir
-const imprimirDados = (nome, cep) => {
-  acharUsuaria(nome) // trocar o nome por um parametro
-    .then((usuaria) => {
-
-      console.log("usuaria carregada")
-
-      return acharEndereco(cep).then((endereco) => { // vamos trocar tbm
-
-      return {
-        usuaria, endereco
-      }
-  //       console.log(`
-  //  nome: ${usuaria.nome}
-  //  email: ${usuaria.email}
-  //  cep: ${endereco.cep}
-  //  cidade: ${endereco.cidade}
-  //  sigla: ${endereco.sigla}
-  //  `);
-
-      });
-    })
-    .then(dados => {
-      const { usuaria, endereco } = dados
-      console.log(dados)
-  //   console.log(`
-  //     nome: ${usuaria.nome}
-  //     email: ${usuaria.email}
-  //     cep: ${endereco.cep}
-  //     cidade: ${endereco.cidade}
-  //     sigla: ${endereco.sigla}
-  //  `);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-};
-
-// imprimirDados("Jani", "12345-678")
-// imprimirDados("Bea", null)
-// imprimirDados(null, "12345-789")
+//imprimirDados("Shi","11712020")
+//imprimirDados("bia")
+//imprimirDados(null, '11346-180')
