@@ -1,15 +1,15 @@
 # Exercício de Casa 🏠 
 
-1. [ ] Criar uma promise que simule um envio de email ela precisa ter como parametro: 
+1. [x] Criar uma promise que simule um envio de email ela precisa ter como parametro: 
   - o email da destinataria
   - mensagem que será enviada.
 
  Regras de negocio:
-  a. Se o email for vazio a retornar um erro
+  a. Se o endereço de email (email da destinatária) for vazio, retornar um erro
 
 ---
 
-2. [ ] Consumir a promise  de envio de email com sucesso.
+2. [x] Consumir a promise  de envio de email com sucesso.
 
 Regras de negocio:
 
@@ -28,7 +28,7 @@ console:
 
 ---
 
-3. [ ] Consumir a promise de envio de email com erro.
+3. [x] Consumir a promise de envio de email com erro.
 
 console:
 ```bash

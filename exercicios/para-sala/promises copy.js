@@ -31,11 +31,6 @@ const acharEndereco = (cep) => {
     })
 }
 
-module.exports = {
-    acharUsuaria, acharEndereco
-}
-
-
 //consumir
 const imprimirDados = (nome, cep) =>{
     acharUsuaria(nome).then((usuaria) => { //troca o nome por um parâmetro
@@ -62,4 +57,7 @@ const imprimirDados = (nome, cep) =>{
 
 //imprimirDados("Bianca", "1012");
 //imprimirDados("Jujuba", null);
-//imprimirDados(null,"1015")
+imprimirDados(null,"1015")
+
+
+

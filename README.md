@@ -233,7 +233,7 @@ Promise {
 </details>
 
 #### Promise Hell
-Assin como acontece com as funções com o callback hell, se as promises não forem usadas aplicando boas praticas de desenvolvimento, podem ser um problema para a saúde do codigo.
+Assim como acontece com as funções com o callback hell, se as promises não forem usadas aplicando boas praticas de desenvolvimento, podem ser um problema para a saúde do codigo.
 
 ```javascript
 promise1()
