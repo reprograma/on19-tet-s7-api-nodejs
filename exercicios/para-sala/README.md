@@ -20,3 +20,6 @@
 1. [ ] Consumir a promise de usuarias com sucesso.
 
 2. [ ] Consumir a promise de usuarias com erro.
+
+## Event Loop
+
