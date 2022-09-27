@@ -6,6 +6,49 @@
  */
 // simulamos uma funcao de achar uma usuaria
 const acharUsuaria = (callback) => { // a gente recebe um callback
+    // recebemos uma callback como primeiro parametro
+    //console.log("O callback foi chamado")
+    console.log("Carregando usuaria...")
+    setTimeout(function() { // simula uma resposta assincrona
+        console.log("Usuaria carregada.")
+        callback(null, {
+          nome: "Beatriz",
+          email: "js@email.com",
+          id: 999
+        })
+    }, 1000)
+  }
+  
+  const acharEndere = function(callback) {
+     console.log("carregando o endereco...")
+     setTimeout(() => {
+      console.log("endereco carregado.")
+      callback(null), {
+        cidade : "Bélem",
+        sigla : "Be"
+      }
+      
+     }, 5000)
+  }
+  
+  acharUsuaria((err, usuaria) => {
+    console.log("Callback chamado.")
+    //console.log(err, usuaria)
+    if (err) {
+      return console.error(err)
+    }
+  
+    acharEndereco(() => { 
+      console.log(`
+        usuaria: ${usuaria.nome}
+        email: ${usuaria.email}
+       
+      `)
+    })
+  })
+  
+
+  
   // recebemos uma callback como primeiro parametro
   //console.log("O callback foi chamado")
   console.log("Carregando usuaria...")
@@ -17,7 +60,7 @@ const acharUsuaria = (callback) => { // a gente recebe um callback
         id: 1234
       })
   }, 1000)
-}
+//}
 
 const acharEndereco = function(callback) {
    console.log("carregando o endereco...")
