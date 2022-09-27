@@ -1,18 +1,17 @@
 setTimeout(() => {
   //... carregando dados do banco ou servidor
-  console.log("primeira funcao assincrona")
-}, 1000)
+  console.log("primeira função assíncrona");
+}, 1000) // leva um tempo a mais para ser processado, embora esteja no começo do código ele vai aparecer por último no terminal
+// atualiza a cada um segundo. 
 
-function comprimentar(callback) {
+function cumprimentar(callback) {
   console.log("micro-task")
-  // banco acharia o email dela
-  callback("bea")
+  callback("Pâm")
 }
 
+cumprimentar((nome) => console.log("Bom dia", nome)) // callback pode ser uma arrow function ou uma função básica
 
-comprimentar((nome) => console.log("Bom dia", nome))
 
-console.log("1. micro task") // callcastack
-console.log("Bom dia meninas, eu to com sono")
-console.log("fim da micro task")
-
+console.log("1. micro task"); // callStack
+console.log("Bom dia! Sabadou!");
+console.log("fim da micro task");

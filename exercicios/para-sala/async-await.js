@@ -1,27 +1,20 @@
-/**
- * palavra reservada async -> indica uma funcao assincrona
- * palavra reserva await -> indica que a pilha precisa esperar
- * palvra reservada try -> captura o erro
- * palvra catch -> que recebe o erro
- */
+
+/*
+palavras reservadas:
+async - indica uma função assíncrona
+await - indica que a pilha precisa esperar 
+try - captura o erro 
+catch - recebe o erro 
+*/
 
 const { acharUsuaria, acharEndereco } = require("./promises")
 
-// async function imprimirDados(nome, cep) {}
+// async function imprimirDados(nome, cep) {} -- exemplo com function
 
-const imprimirDados = async (nome, cep) => { // é uma funcao assincrona
-   try {
-     const endereco = await acharEndereco(cep)
-     const usuaria = await acharUsuaria(nome) // espera achar a usuaria
-      console.log(usuaria, endereco)
-   } catch (err) {
-    console.log(err)
-   }
-  //  const usuaria = await acharUsuaria(nome) // espera achar a usuaria
-  //  const endereco = await acharEndereco(cep)
-  //  console.log(usuaria, endereco)
+const imprimirDados = async (nome, cep) => {  // é uma função assincrona
+    const usuaria = await acharUsuaria(nome) // esperar a usuaria
+    const endereco = await acharEndereco(cep)
+    console.log(usuaria, endereco)
 }
 
-imprimirDados("Jani", "12345-678") // 2
-imprimirDados("Bea", null) // 3
-imprimirDados(null, "12345-789") // 1
+imprimirDados("Pâm", "77777-000")
