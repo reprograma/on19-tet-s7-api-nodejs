@@ -5,7 +5,7 @@
   - mensagem que será enviada.
 
  Regras de negocio:
-  a. Se o email for vazio a retornar um erro
+  a. Se o email da destinataria for vazio, retornar um erro
 
 ---
 
