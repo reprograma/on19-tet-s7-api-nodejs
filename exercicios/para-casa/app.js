@@ -5,7 +5,7 @@ const enviarEmail = (email, mensagem) => {
             if (!email) {
                 return reject("Falha ao enviar o email. O endereço de email da destinária precisa ser informado")
             }
-            return resolve("Para: " + ({
+            return resolve(({
                 para: email,
             }).para)
         }, 2000);
@@ -33,5 +33,20 @@ emailEnviado("elis@email.com", "Consolidação dos conhecimentos em Promise");
 //emailEnviado("elis@email.com");
 
 // consome a promise de envio de email com erro
-//emailEnviado(null, "EnderecoEmail");
+emailEnviado(null, "Erro-SemEnderecoEmail");
 
+
+//async function para simular envio de email consumindo a promise
+
+const simularEnvioEmail = async (toMail, msg) => {
+    console.log("Tentando enviar email...");
+    try {
+        const destinataria = await enviarEmail("Para: " + toMail)
+        const msgEmail = await enviarEmail(msg)
+        console.log("Email enviado com sucesso");
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+simularEnvioEmail("eu@email.com", "Exercício para casa com promise consumida com async/await")
