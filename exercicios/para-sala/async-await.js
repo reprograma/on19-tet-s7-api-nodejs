@@ -13,7 +13,12 @@ const imprimirDados = async (nome, cep) => { // é uma funcao assincrona
    try {
      const endereco = await acharEndereco(cep)
      const usuaria = await acharUsuaria(nome) // espera achar a usuaria
-      console.log(usuaria, endereco)
+      //console.log(usuaria, endereco)
+      //return { endereco, usuaria }
+      return {
+        endereco: endereco,
+        usuaria: usuaria
+      }
    } catch (err) {
     console.log(err)
    }
@@ -22,6 +27,18 @@ const imprimirDados = async (nome, cep) => { // é uma funcao assincrona
   //  console.log(usuaria, endereco)
 }
 
-imprimirDados("Jani", "12345-678") // 2
-imprimirDados("Bea", null) // 3
-imprimirDados(null, "12345-789") // 1
+// imprimirDados("Jani", "12345-678") // 2
+// imprimirDados("Bea", null) // 3
+// imprimirDados(null, "12345-789") // 1
+const imprimirDadosComPromiseAll = async () => {
+  const values = await Promise // retorna uma array com todos os resultados, CASO OCORRA SUCESSO EM TODAS AS PROMISES
+  .all([ // o método .all() ele recebe como parametro uma array de promise
+    acharUsuaria("Bea"), // ele só traz os dados da usuaria
+    acharEndereco("12345678"), // ele só os dados do endereco
+    imprimirDados("Elvira", "123456") // como aqui foi chamado ambos e seus resultados retornados, ele traz ambos
+    ])
+
+    console.log(values)
+}
+
+imprimirDadosComPromiseAll()
