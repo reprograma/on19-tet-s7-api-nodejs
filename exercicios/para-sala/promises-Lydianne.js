@@ -30,23 +30,27 @@ const acharEndereco = (cep) => {
 }
 
 //  consumir
-const imprimirDados = () => {
-acharUsuaria("Lydianne")
+const imprimirDados = (nome,cep) => {
+acharUsuaria(nome) // trocar por um parametro
     .then((usuaria) => {
 
         console.log("Usuaria carregada.")
 
-        acharEndereco("12345-078").then((endereco) => {
-
-        console.log(`
+        return acharEndereco(cep).then(endereco => {//vamos trocar aqui
+return{
+    usuaria, endereco
+}
+    /*console.log(`
     nome: ${usuaria.nome}
     email: ${usuaria.email}
     cep: ${endereco.cep}
     cidade: ${endereco.cidade}
-    sigla: ${endereco.sigla}
-    `);
+   sigla: ${endereco.sigla}
+    `);*/
 
-        });
+    })
+    }).then(dados =>{
+        console.log(dados)
     })
     .catch((err) => {
         console.error(err);
@@ -54,4 +58,9 @@ acharUsuaria("Lydianne")
 
 };
 
-imprimirDados()
+/*imprimirDados("Lydianne", "12345-078")
+imprimirDados("Anne", null)
+imprimirDados(null, "12347-889")*/
+module.exports = {
+    acharUsuaria, acharEndereco
+}
