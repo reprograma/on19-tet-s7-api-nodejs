@@ -2,6 +2,7 @@ console.clear()
 
 // construção
 const acharUsuaria = (nome) => {
+    console.log("chamou a promise - achar usuária!");
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if(!nome) {
@@ -16,6 +17,7 @@ const acharUsuaria = (nome) => {
     })
 }
 const acharEndereco = (cep) => {
+    console.log("chamou a promise - achar endereço!");
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (!cep) {
@@ -78,3 +80,15 @@ acharUsuaria(nome) // trocar o nome por um parâmetro
 // imprimirDados("Pâm", "77777-000")
 // imprimirDados("Pâm", null)
 // imprimirDados(null, "77777-000")
+
+// se precisar consumir com await
+//await Promise.all([acharEndereco("77777-000"), acharUsuaria("Pâm")])
+
+// objeto com letra maiúscula = classe
+// Promise.all([acharEndereco("77777-000"), acharUsuaria("Pâm")])
+// .then(values => {
+//     console.log(values)
+// }).catch(erros => {
+//     console.log(erros)
+// })
+
