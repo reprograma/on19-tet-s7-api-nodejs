@@ -1,5 +1,6 @@
 // construcao
 const acharUsuaria = (nome) => {
+  console.log("chamou a promise! - acharUsuaria")
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (!nome) {
@@ -15,6 +16,7 @@ const acharUsuaria = (nome) => {
 };
 
 const acharEndereco = (cep) => {
+  console.log("chamou a promise! - acharEndereco")
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (!cep) {
@@ -75,3 +77,16 @@ const imprimirDados = (nome, cep) => {
 // imprimirDados("Jani", "12345-678")
 // imprimirDados("Bea", null)
 // imprimirDados(null, "12345-789")
+// se precisar consumir com async await
+// await Promise.all([acharEndereco("123456"), acharUsuaria("bea")])
+
+// Promise.all([acharEndereco("123456"), acharUsuaria("bea")])
+// .then(values => {
+//   console.log(values)
+// }).catch(erros => {
+//   console.log(erros)
+// }) 
+
+
+
+
