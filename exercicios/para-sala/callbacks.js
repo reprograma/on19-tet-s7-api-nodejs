@@ -23,7 +23,15 @@ const acharEndereco = function(callback) {
    console.log("carregando o endereco...")
    setTimeout(() => {
     console.log("endereco carregado.")
+<<<<<<< HEAD
     callback()
+=======
+    const cidade = "Sao Paulo"
+    callback(null, {
+      cidade: cidade,
+      sigla: "SP"
+    })
+>>>>>>> cb6934c7b43dc64e1cbab0886b466e1f01a8d44e
    }, 5000)
 }
 
@@ -34,6 +42,7 @@ acharUsuaria((err, usuaria) => {
     return console.error(err)
   }
 
+<<<<<<< HEAD
   acharEndereco(() => { 
     console.log(`
       usuaria: ${usuaria.nome}
@@ -41,3 +50,13 @@ acharUsuaria((err, usuaria) => {
     `)
   })
 })
+=======
+  acharEndereco((err, endereco) => { 
+    console.log(`
+      usuaria: ${usuaria.nome}
+      email: ${usuaria.email}
+      endereco: ${endereco.cidade} - ${endereco.sigla}
+    `)
+  })
+})
+>>>>>>> cb6934c7b43dc64e1cbab0886b466e1f01a8d44e
