@@ -34,5 +34,5 @@ console:
 ```bash
   tentando enviar email...
 
-  falha ao enviar o email.
+  falha ao enviar o email.*/
 ```
