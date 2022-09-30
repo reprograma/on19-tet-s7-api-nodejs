@@ -5,9 +5,10 @@
  * (err, musica) => {}
  */
 // simulamos uma funcao de achar uma usuaria
-const acharUsuaria = (callback) => { // a gente recebe um callback
+ // a gente recebe um callback
   // recebemos uma callback como primeiro parametro
   //console.log("O callback foi chamado")
+  const acharUsuaria = (callback) => {
   console.log("Carregando usuaria...")
   setTimeout(function() { // simula uma resposta assincrona
       console.log("Usuaria carregada.")
