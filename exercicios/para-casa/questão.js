@@ -31,7 +31,7 @@ const acharEmail = (email) => {
             Assunto: Resolver o exercício
             
 
-            Mensagem: Para resolver o exercício, coloque em prática o que foi passado na aula, caso precise, basta rever o  material da aula\n`) // a mensagem a ser impressa
+            Mensagem: Para resolver o exercício, coloque em prática o que foi passado na aula, caso precise, basta rever o  material da aula`) // a mensagem a ser impressa
         setTimeout(() => { 
             console.log("E-mail enviado com sucesso!\n")
         },2000)
