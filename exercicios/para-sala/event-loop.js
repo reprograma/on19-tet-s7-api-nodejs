@@ -9,7 +9,6 @@ function comprimentar(callback) {
   callback("bea")
 }
 
-
 comprimentar((nome) => console.log("Bom dia", nome))
 
 console.log("1. micro task") // callcastack
