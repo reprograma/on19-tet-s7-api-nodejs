@@ -6,7 +6,7 @@
  * palavra reservada try -> captura o erro
  * palavra reservada catch -> que recebe o erro
  * 
- */
+ 
 const {acharUsuaria, acharEndereco} = require("./promises.js")
 
 //async function imprimirDados(nome,cep) {} herança
@@ -16,7 +16,7 @@ const imprimirDados = async (nome, cep) => {
 }
 
 imprimirDados("Roberta")
-
+/*
  * palavra reserva await -> indica que a pilha precisa esperar
  * palvra reservada try -> captura o erro
  * palvra catch -> que recebe o erro
@@ -59,4 +59,4 @@ const imprimirDadosComPromiseAll = async () => {
 }
 
 imprimirDadosComPromiseAll()
->>>>>>> cb6934c7b43dc64e1cbab0886b466e1f01a8d44e
+
