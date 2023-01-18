@@ -1,5 +1,4 @@
 /*3. [ ] Consumir a promise de envio de email com erro.
-
 console:
 ```bash
   tentando enviar email...

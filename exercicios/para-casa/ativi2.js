@@ -33,12 +33,3 @@ email2(
 );
 
 
-//OUTRA FORMA DE RESOLVER :
-/*let promise = new Promise(function(resolve, reject) {
-  setTimeout(() => resolve("Email enviado com sucesso !"), 1000);
-});
-
-promise.then(
-  result => console.log(result), 
-  error => console.log(error) 
-);*/
